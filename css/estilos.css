@@ -19,8 +19,6 @@ body {
     line-height: 1.6;
 }
 
-/* ... (Tus estilos de header, container y card se mantienen igual) ... */
-
 header {
     background: var(--bg-card);
     padding: 1rem 2rem;
@@ -48,7 +46,6 @@ header {
 
 .card:hover { transform: translateY(-2px); border-color: #475569; }
 
-/* Formulario Moderno (Dashboard) */
 form.task-form {
     display: flex;
     gap: 0.75rem;
@@ -84,11 +81,7 @@ button {
 .btn-delete { background: var(--accent-error); color: white; }
 button:hover { filter: brightness(1.1); }
 
-/* =========================================
-   NUEVA SECCIÓN: CENTRADO DE LOGIN
-   ========================================= */
 
-/* 1. Centra la tarjeta en toda la pantalla */
 .login-page {
     display: flex;
     justify-content: center;
@@ -96,35 +89,33 @@ button:hover { filter: brightness(1.1); }
     min-height: 100vh;
 }
 
-/* 2. Centra el contenido dentro de la tarjeta */
 .login-page .card {
     width: 100%;
     max-width: 400px;
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrado horizontal de hijos */
+    align-items: center;
     text-align: center;
 }
 
-/* 3. Centra inputs y botones dentro del form */
 .login-page form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alinea hijos al centro */
-    gap: 1rem;           /* Espacio uniforme entre elementos */
+    align-items: center; 
+    gap: 1rem;           
     margin-top: 1.5rem;
 }
 
 .login-page input {
-    width: 100%;        /* Ocupa el ancho total del form */
-    max-width: 320px;   /* Evita que se vea demasiado ancho */
+    width: 100%;      
+    max-width: 320px; 
 }
 
 .login-page button {
     width: 100%;
-    max-width: 200px;   /* Botón más estilizado */
+    max-width: 200px;  
     background: var(--text-primary);
     color: var(--bg-main);
     margin-top: 0.5rem;
@@ -135,7 +126,6 @@ button:hover { filter: brightness(1.1); }
     transform: scale(1.02);
 }
 
-/* ===== HOME PAGE (LANDING) ===== */
 .home-page {
     display: flex;
     flex-direction: column;
@@ -151,8 +141,8 @@ button:hover { filter: brightness(1.1); }
 .hero-section {
     flex: 1;
     display: flex;
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
+    align-items: center; 
+    justify-content: center; 
     padding: 40px 0;
 }
 
@@ -172,7 +162,6 @@ button:hover { filter: brightness(1.1); }
     font-size: 1.1rem;
 }
 
-/* Grid para las tarjetas del menú */
 .grid-menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -211,7 +200,6 @@ button:hover { filter: brightness(1.1); }
     padding: 12px;
 }
 
-/* Estilo para el botón de regresar en Login */
 .btn-return {
     display: inline-block;
     margin-top: 20px;
@@ -231,9 +219,8 @@ button:hover { filter: brightness(1.1); }
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* Ajuste para que el botón de Ingresar en login sea consistente */
 .login-page .btn-add {
     width: 100%;
-    max-width: 250px; /* Un poco más ancho para mejor balance */
+    max-width: 250px;
     margin-top: 10px;
 }
