@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// 1. Redirección si ya hay sesión activa
 if (isset($_SESSION['user'])) {
     header("Location: index.php");
     exit();
@@ -9,7 +8,6 @@ if (isset($_SESSION['user'])) {
 
 include(__DIR__ . "/../config/conexion.php");
 
-// 2. INICIALIZACIÓN: Evita el error "Undefined variable"
 $error = ""; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pass_input = trim($_POST['password']);
 
     if (!empty($user_input) && !empty($pass_input)) {
-        // 3. SEGURIDAD: Sentencias preparadas
         $stmt = $conn->prepare("SELECT * FROM usuarios WHERE username = ? AND password = ?");
         $stmt->bind_param("ss", $user_input, $pass_input);
         $stmt->execute();
