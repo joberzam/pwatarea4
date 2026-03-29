@@ -1,0 +1,239 @@
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent-success: #22c55e;
+    --accent-error: #ef4444;
+    --accent-info: #3b82f6;
+    --radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* ... (Tus estilos de header, container y card se mantienen igual) ... */
+
+header {
+    background: var(--bg-card);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #334155;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    border: 1px solid #334155;
+    transition: var(--transition);
+}
+
+.card:hover { transform: translateY(-2px); border-color: #475569; }
+
+/* Formulario Moderno (Dashboard) */
+form.task-form {
+    display: flex;
+    gap: 0.75rem;
+    background: var(--bg-card);
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: white;
+    outline: none;
+}
+
+input:focus { border-color: var(--accent-info); }
+
+/* Botones */
+button {
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-add { background: var(--accent-success); color: white; }
+.btn-complete { background: var(--accent-info); color: white; }
+.btn-delete { background: var(--accent-error); color: white; }
+button:hover { filter: brightness(1.1); }
+
+/* =========================================
+   NUEVA SECCIÓN: CENTRADO DE LOGIN
+   ========================================= */
+
+/* 1. Centra la tarjeta en toda la pantalla */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. Centra el contenido dentro de la tarjeta */
+.login-page .card {
+    width: 100%;
+    max-width: 400px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrado horizontal de hijos */
+    text-align: center;
+}
+
+/* 3. Centra inputs y botones dentro del form */
+.login-page form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea hijos al centro */
+    gap: 1rem;           /* Espacio uniforme entre elementos */
+    margin-top: 1.5rem;
+}
+
+.login-page input {
+    width: 100%;        /* Ocupa el ancho total del form */
+    max-width: 320px;   /* Evita que se vea demasiado ancho */
+}
+
+.login-page button {
+    width: 100%;
+    max-width: 200px;   /* Botón más estilizado */
+    background: var(--text-primary);
+    color: var(--bg-main);
+    margin-top: 0.5rem;
+}
+
+.login-page button:hover {
+    background: white;
+    transform: scale(1.02);
+}
+
+/* ===== HOME PAGE (LANDING) ===== */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-section {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    padding: 40px 0;
+}
+
+.welcome-text {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.welcome-text h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.welcome-text p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Grid para las tarjetas del menú */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.exercise-card {
+    text-align: center;
+    padding: 3rem 2rem;
+    border: 1px solid #334155;
+    background: linear-gradient(145deg, #1e293b, #111827);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.exercise-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.exercise-card p {
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}
+
+.exercise-card .btn-add {
+    width: 100%;
+    max-width: 200px;
+    font-size: 1rem;
+    padding: 12px;
+}
+
+/* Estilo para el botón de regresar en Login */
+.btn-return {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.btn-return:hover {
+    color: var(--text-primary);
+    border-color: #334155;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Ajuste para que el botón de Ingresar en login sea consistente */
+.login-page .btn-add {
+    width: 100%;
+    max-width: 250px; /* Un poco más ancho para mejor balance */
+    margin-top: 10px;
+}
